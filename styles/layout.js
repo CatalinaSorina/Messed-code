@@ -21,6 +21,7 @@ export const Header = styled.header`
 
 export const Main = styled.main`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 85vh;

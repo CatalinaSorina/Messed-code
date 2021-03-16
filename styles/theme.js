@@ -20,13 +20,7 @@ const theme = {
     onlyTablet: '@media only screen and (min-width: 700px)',
     laptop: '@media only screen and (max-width: 1280px)',
     desk: '@media only screen and (min-width: 1281px)',
-  },
-  selection: {
-    default: `::selection {
-        color: black;
-        background: transparent;
-    }`,
-  },
+  }
 };
 
 export default theme;
