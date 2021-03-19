@@ -1,20 +1,27 @@
 import { useState, useEffect } from 'react';
 import { BoxHolder, Box, Answer } from '../../styles/level1';
-import Battery from './Battery';
-import BoxChat from './BoxChat';
-import BoxFace from './BoxFace';
-import DropCode from './DropCode';
-import { checkAnswer, checkCorrectAnswer } from './utils';
+import Battery from './components/Battery';
+import BoxChat from './components/BoxChat';
+import BoxFace from './components/BoxFace';
+import DropCode from './components/DropCode';
+import { checkAnswer, checkCorrectAnswer, getScore } from './utils';
 
-const BoxLevel1 = ({ happy, msg, details, editDetails, setNextLevel }) => {
+const BoxLevel1 = ({ happy, msg, details, editDetails, setNextLevel, updateLevel, updateCash }) => {
   const [chatOpened, setChatOpened] = useState(false);
   const [detailsEdited, setDetailsEdited] = useState('');
   const [correctPosition, setCorrectPosition] = useState(false);
   const isHappy = happy || (correctPosition && checkAnswer(detailsEdited));
+  const correctAnswers = correctPosition && checkCorrectAnswer(detailsEdited);
+
   useEffect(() => {
-    setNextLevel &&
-      setNextLevel(correctPosition && checkCorrectAnswer(detailsEdited));
+    if (setNextLevel && updateLevel) {
+      setNextLevel(correctAnswers);
+      const score = correctAnswers ? getScore(detailsEdited) : 0;
+      updateLevel({score: score});
+      updateCash && score!==0 && updateCash(score / 100);
+    }
   }, [correctPosition, detailsEdited]);
+
   return (
     <BoxHolder
       topChat={isHappy && chatOpened}
@@ -26,8 +33,9 @@ const BoxLevel1 = ({ happy, msg, details, editDetails, setNextLevel }) => {
             setCorrectPosition={setCorrectPosition}
           />
           <Answer
+            disabled={correctAnswers}
             value={detailsEdited}
-            onChange={({ target }) => setDetailsEdited(target.value)}
+            onChange={({ target }) => !correctAnswers && setDetailsEdited(target.value)}
           />
         </>
       ) : (

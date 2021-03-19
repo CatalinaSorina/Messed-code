@@ -1,5 +1,5 @@
-import { Face } from '../../styles/level1';
-import { chargedMouth, checkCharged } from './utils';
+import { Face } from '../../../styles/level1';
+import { chargedMouth, checkCharged } from '../utils';
 
 const BoxFace = ({ happy }) => (
   <Face happy={checkCharged(happy, 60)}>

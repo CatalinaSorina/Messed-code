@@ -1,5 +1,5 @@
-import { BoxBattery, BatteryLife } from '../../styles/level1';
-import { checkCharged } from './utils';
+import { BoxBattery, BatteryLife } from '../../../styles/level1';
+import { checkCharged } from '../utils';
 
 const Battery = ({ charged }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import hljs from 'highlight.js';
 import javascript from 'highlight.js/lib/languages/javascript';
-import { DropArea, DraggableAnswer } from '../../styles/level1';
+import { DropArea, DraggableAnswer } from '../../../styles/level1';
 hljs.registerLanguage('javascript', javascript);
 
 const DropCode = ({ answer, setCorrectPosition }) => {

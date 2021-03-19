@@ -201,8 +201,8 @@ export const NextLevel = styled.button(
   () => css`
     position: absolute;
     font-size: 25px;
-    top: 20%;
-    left: 20%;
+    top: 15%;
+    left: 10%;
     width: 150px;
     height: 50px;
     color: #423c33;
@@ -225,4 +225,31 @@ const nextLevel = keyframes`
   50%  {border-radius: 4px;}
   75%  {border-radius: 20%;transform:rotate(-30deg);}
   100% {border-radius: 50%;}
+`;
+
+export const Letters = styled.div`
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px;
+  font-size: 15px;
+  cursor: text;
+`;
+
+export const Letter = styled.span(
+  ({ sp }) => css`
+    width: 20px;
+    margin-right: 2px;
+    border-bottom: 1px solid black;
+    ${!sp &&
+    css`
+      padding: 0 4px;
+    `};
+  `
+);
+
+export const Space = styled.span`
+  margin-right: 10px;
 `;

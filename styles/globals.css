@@ -6,8 +6,9 @@ body {
   cursor: default;
 }
 ::selection {
-  color: #f9c076;
+  color: #fbc131;
   background: transparent;
+  text-shadow: 1px 1px 1px black;
 }
 * {
   box-sizing: border-box;

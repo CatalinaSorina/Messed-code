@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import NextLink from 'next/link';
 
 export const BreakLine = styled.hr`
   width: 50%;
@@ -7,7 +6,7 @@ export const BreakLine = styled.hr`
   border-radius: 100%;
 `;
 
-export const StartButton = styled(NextLink)`
+export const StartButton = styled.a`
   outline: none;
   background: black;
   margin-right: 8px;
