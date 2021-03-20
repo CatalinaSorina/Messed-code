@@ -15,7 +15,7 @@ export default function level1() {
         {nextLevel && (
           <>
             <Concept updateCash={updateCash} />
-            <NextLevel>next level</NextLevel>
+            <NextLevel id='cursorPointer'>next level</NextLevel>
           </>
         )}
         <BoxLevel1
