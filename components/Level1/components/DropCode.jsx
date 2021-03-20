@@ -14,7 +14,7 @@ const DropCode = ({ answer, setCorrectPosition }) => {
 
   return (
     <>
-      <DraggableAnswer ref={answerRef} draggable answer={answer}>
+      <DraggableAnswer ref={answerRef} draggable answer={answer} id='cursorGrab'>
         {answer || '...'}
       </DraggableAnswer>
       <DropArea

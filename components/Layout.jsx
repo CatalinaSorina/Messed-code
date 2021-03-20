@@ -14,8 +14,8 @@ const Layout = ({ tabTitle, headMsg, children }) => {
       <Header>🐭 {headMsg} Cash: {(cash && cash.toFixed(2)) || 0} 🧀</Header>
       <Main>{children}</Main>
       <Footer>
-        <button>{'<'}</button>
-        <button>{'>'}</button>
+        <button id='cursorPointer'>{'<'}</button>
+        <button id='cursorPointer'>{'>'}</button>
       </Footer>
     </div>
   );

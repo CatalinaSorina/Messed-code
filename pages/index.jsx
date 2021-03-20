@@ -6,7 +6,7 @@ export default function Home() {
     <Layout tabTitle='Start point'>
       Welcome!
       <BreakLine />
-      <StartButton href='/level1'>start</StartButton>
+      <StartButton href='/level1' id='cursorPointer'>start</StartButton>
     </Layout>
   );
 }

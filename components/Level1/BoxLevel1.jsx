@@ -41,7 +41,7 @@ const BoxLevel1 = ({ happy, msg, details, editDetails, setNextLevel, updateLevel
       ) : (
         <BoxChat msg={msg} />
       )}
-      <Box onClick={() => setChatOpened(!chatOpened)}>
+      <Box onClick={() => setChatOpened(!chatOpened)} id='cursorPointer'>
         <Battery charged={isHappy} />
         <BoxFace happy={isHappy} />
         {!editDetails && details}

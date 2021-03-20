@@ -4,6 +4,11 @@ body {
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
   cursor: default;
+  cursor: url('../public/cursor.gif'), default;
+}
+:disabled {
+  cursor: default;
+  cursor: url('../public/cursor.gif'), default;
 }
 ::selection {
   color: #fbc131;
@@ -12,6 +17,22 @@ body {
 }
 * {
   box-sizing: border-box;
+}
+#cursorText {
+  cursor: text;
+  cursor: url('../public/Text.cur'), text;
+}
+#cursorPointer {
+  cursor: pointer;
+  cursor: url('../public/Link.cur'), pointer;
+}
+#cursorGrab {
+  cursor: grab;
+  cursor: url('../public/Grab.cur'), grab;
+}
+#cursorGrabbing {
+  cursor: grabbing;
+  cursor: url('../public/Grabbing.cur'), grabbing;
 }
 
 pre {

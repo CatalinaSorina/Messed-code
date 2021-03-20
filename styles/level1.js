@@ -179,7 +179,7 @@ export const DraggableAnswer = styled.code(
     border-radius: 4px;
     text-align: center;
     color: ${setDraggableAnswerColor(answer)};
-    cursor: pointer;
+    cursor: grab;
     margin-bottom: 5%;
   `
 );
